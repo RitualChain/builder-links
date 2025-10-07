@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles } from "lucide-react"
+import { links } from '@/lib/constants'
+import Link from 'next/link'
 
 export function HeroSection() {
   return (
@@ -17,13 +19,29 @@ export function HeroSection() {
           documentation, collaborate with peers, and showcase your innovations.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button size="lg" className="gap-2">
-            Start Building
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-          <Button size="lg" variant="outline">
-            View Documentation
-          </Button>
+          <Link
+            href={links.github.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg" className="gap-2"
+            >
+              Start Building
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
+          <Link
+            href={links.telegram.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              size="lg" variant="outline"
+            >
+              Join Telegram
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

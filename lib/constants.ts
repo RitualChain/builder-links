@@ -56,7 +56,7 @@ export const links = {
     },
 } as const;
 
-// Array of all links for iteration
+// Array of all links for iteration 
 export const linksArray: Link[] = Object.values(links);
 
 // Filtered arrays by type

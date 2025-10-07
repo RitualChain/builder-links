@@ -1,7 +1,7 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { BentoGrid } from "@/components/bento-grid"
-import { Footer } from "@/components/footer"
+// import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         <HeroSection />
         <BentoGrid />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

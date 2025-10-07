@@ -1,4 +1,4 @@
-import { BookOpen, Users, Rocket, Coins, MessageSquare, Code2, Github, Send, MessageCircle } from "lucide-react"
+import { BookOpen, Users, MessageSquare, Github, Send, MessageCircle } from "lucide-react"
 import { BentoCard } from "@/components/bento-card"
 import { links } from "@/lib/constants"
 
@@ -6,13 +6,13 @@ export function BentoGrid() {
   return (
     <section className="container mx-auto px-4 pb-20">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {/* Large card - Documentation */}
+        {/* Large card — Feedback */}
         <BentoCard
-          title="Documentation"
-          description="Comprehensive guides, API references, and tutorials to get you started with Ritual Chain development."
-          icon={BookOpen}
+          title="Feedback Dashboard"
+          description="A public dashboard for developers to share feature requests, vote on ideas, and discuss priorities. Shape the roadmap through transparent, two-way communication with the Ritual Foundation."
+          icon={MessageSquare}
           className="md:col-span-2 lg:row-span-2"
-          href={links.docs.href}
+          href={links.feedback.href}
           featured
         />
 
@@ -32,12 +32,14 @@ export function BentoGrid() {
           href={links.discord.href}
         />
 
+
+        {/* Large card - Documentation */}
         <BentoCard
-          title="Feedback Dashboard"
-          description="A public dashboard for developers to share feature requests, vote on ideas, and discuss priorities. Shape the roadmap through transparent, two-way communication with the Ritual Foundation."
-          icon={MessageSquare}
+          title="Documentation"
+          description="Comprehensive guides, API references, and tutorials to get you started with Ritual Chain development."
+          icon={BookOpen}
           className="md:col-span-2 lg:row-span-2"
-          href={links.feedback.href}
+          href={links.docs.href}
           featured
         />
 

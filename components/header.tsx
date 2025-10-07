@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
+import Link from 'next/link'
 import { Icon } from '@iconify/react'
+import { communityLinks, links, resourceLinks } from '@/lib/constants'
 
 export function Header() {
   return (
@@ -19,26 +21,47 @@ export function Header() {
             </div>
             <span className="text-lg font-semibold">Ritual Chain</span>
           </div>
-          <nav className="hidden items-center gap-6 md:flex">
-            <a href="#docs" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-              Docs
-            </a>
-            <a href="#community" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-              Community
-            </a>
-            <a href="#showcase" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-              Showcase
-            </a>
-            <a href="#resources" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-              Resources
-            </a>
+          <nav className="hidden items-center gap-2 md:flex">
+            {resourceLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.name}
+              </Link>
+            ))}
           </nav>
         </div>
-        <div className="flex items-center gap-3">
-          <Button variant="ghost" size="icon">
-            <Icon icon="ri:github-fill" className="size-7" />
-          </Button>
-          <Button size="sm">Get Started</Button>
+        <div className="flex items-center gap-2">
+          <div className="hidden items-center gap-1 md:flex">
+            {communityLinks.map((link) => (
+              <Button
+                key={link.name}
+                variant="ghost"
+                size="icon"
+                asChild
+              >
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={link.name}
+                >
+                  <Icon icon={link.icon} className="size-5" />
+                </Link>
+              </Button>
+            ))}
+          </div>
+          <Link
+            href={links.github.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="sm">Get Started</Button>
+          </Link>
         </div>
       </div>
     </header>
