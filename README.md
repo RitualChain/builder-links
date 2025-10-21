@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>🔗 Ritual Chain Developer Hub</h3>
-  <p>A curated collection of resources for builders on Ritual Chain</p>
+  <p>Curated collection of resources for builders on Ritual Chain</p>
   <p>
     <a href="https://links.ritual.tools"><strong>Visit Live Site »</strong></a>
   </p>
