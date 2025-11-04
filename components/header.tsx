@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { communityLinks, links, resourceLinks } from '@/lib/constants'
+import { downloadCalendarEvent } from '@/lib/utils'
 
 export function Header() {
   return (
@@ -90,8 +91,16 @@ export function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Add to Calendar
+                    Add to Calendar (Google)
                   </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onSelect={(e) => {
+                    e.preventDefault()
+                    downloadCalendarEvent()
+                  }}
+                >
+                  Download Calendar File (.ics)
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
