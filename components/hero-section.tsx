@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { links } from '@/lib/constants'
 import Link from 'next/link'
+import { Icon } from "@iconify/react"
 
 export function HeroSection() {
   return (
@@ -27,8 +28,8 @@ export function HeroSection() {
             <Button
               size="lg" className="gap-2"
             >
-              Start Building
-              <ArrowRight className="h-4 w-4" />
+              Start Building on Ritual
+              <Icon icon="ri:github-fill" className="h-4 w-4" />
             </Button>
           </Link>
           <Link
@@ -37,9 +38,11 @@ export function HeroSection() {
             rel="noopener noreferrer"
           >
             <Button
-              size="lg" variant="outline"
+              size="lg"
+              className="bg-[#0088cc] hover:bg-[#006699] text-white border-none shadow-lg hover:shadow-xl transition-all"
             >
-              Join Telegram
+              Join Telegram for Developers
+              <Icon icon="ri:telegram-fill" className="h-4 w-4" />
             </Button>
           </Link>
         </div>

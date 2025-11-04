@@ -1,4 +1,4 @@
-import { BookOpen, Users, MessageSquare, Github, Send, MessageCircle } from "lucide-react"
+import { BookOpen, Users, MessageSquare, Github, Send, MessageCircle, Calendar } from "lucide-react"
 import { BentoCard } from "@/components/bento-card"
 import { links } from "@/lib/constants"
 
@@ -47,8 +47,9 @@ export function BentoGrid() {
           title="Telegram"
           description="Join our Telegram channels for quick updates, announcements, and community chat."
           icon={Send}
-          className="md:col-span-1"
+          className="md:col-span-2 border-[#0088cc]/30 bg-gradient-to-br from-[#0088cc]/5 to-card hover:border-[#0088cc]/50 hover:shadow-lg hover:shadow-[#0088cc]/10"
           href={links.telegram.href}
+          featured
         />
 
         <BentoCard
@@ -57,6 +58,14 @@ export function BentoGrid() {
           icon={Users}
           className="md:col-span-1"
           href={links.reddit.href}
+        />
+
+        <BentoCard
+          title="Office Hours"
+          description="Join Ritual's Lead DevRel Engineer, Val Alexander, every Thursday for office hours. Ask questions, explore new features, and get assistance bringing your ideas from prototype to production."
+          icon={Calendar}
+          className="md:col-span-3"
+          href={links.officeHours.discordEventUrl || links.officeHours.href}
         />
       </div>
     </section>

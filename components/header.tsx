@@ -1,7 +1,16 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
+import { Calendar } from 'lucide-react'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { communityLinks, links, resourceLinks } from '@/lib/constants'
 
 export function Header() {
@@ -43,6 +52,7 @@ export function Header() {
                 variant="ghost"
                 size="icon"
                 asChild
+                className={link.name === "Telegram" ? "bg-[#0088cc]/10 hover:bg-[#0088cc]/20 text-[#0088cc] hover:text-[#0088cc]" : ""}
               >
                 <Link
                   href={link.href}
@@ -54,6 +64,37 @@ export function Header() {
                 </Link>
               </Button>
             ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  title="Office Hours"
+                >
+                  <Calendar className="size-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem asChild>
+                  <Link
+                    href={links.officeHours.discordEventUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Join Office Hours
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link
+                    href={links.officeHours.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Add to Calendar
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
           <Link
             href={links.github.href}
