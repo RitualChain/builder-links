@@ -5,7 +5,7 @@
   "scripts": {
     "bdev": "next build && PORT=3050 next dev",
     "build": "next build",
-    "dev": "PORT=3050 next dev",
+    "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
   },

@@ -1,18 +1,17 @@
-'use client'
-
-import { Button } from "@/components/ui/button"
-import Image from 'next/image'
-import Link from 'next/link'
-import { Icon } from '@iconify/react'
-import { Calendar } from 'lucide-react'
+import ThemeToggle from "./theme-toggle";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import { Icon } from "@iconify/react";
+import { Calendar } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { communityLinks, links, resourceLinks } from '@/lib/constants'
-import { downloadCalendarEvent } from '@/lib/utils'
+} from "@/components/ui/dropdown-menu";
+import { communityLinks, links, resourceLinks } from "@/lib/constants";
+import { downloadCalendarEvent } from "@/lib/utils";
 
 export function Header() {
   return (
@@ -26,7 +25,7 @@ export function Header() {
                 height={120}
                 width={120}
                 alt="Ritual Chain Logo"
-                className='justify-center object-contain items-center rounded-2xl'
+                className="justify-center object-contain items-center rounded-2xl"
               />
             </div>
             <span className="text-lg font-semibold">Ritual Chain</span>
@@ -45,6 +44,7 @@ export function Header() {
             ))}
           </nav>
         </div>
+
         <div className="flex items-center gap-2">
           <div className="hidden items-center gap-1 md:flex">
             {communityLinks.map((link) => (
@@ -53,7 +53,11 @@ export function Header() {
                 variant="ghost"
                 size="icon"
                 asChild
-                className={link.name === "Telegram" ? "bg-[#0088cc]/10 hover:bg-[#0088cc]/20 text-[#0088cc] hover:text-[#0088cc]" : ""}
+                className={
+                  link.name === "Telegram"
+                    ? "bg-[#0088cc]/10 hover:bg-[#0088cc]/20 text-[#0088cc] hover:text-[#0088cc]"
+                    : ""
+                }
               >
                 <Link
                   href={link.href}
@@ -65,13 +69,12 @@ export function Header() {
                 </Link>
               </Button>
             ))}
+
+            <ThemeToggle />
+
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  title="Office Hours"
-                >
+                <Button variant="ghost" size="icon" title="Office Hours">
                   <Calendar className="size-5" />
                 </Button>
               </DropdownMenuTrigger>
@@ -96,8 +99,8 @@ export function Header() {
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onSelect={(e) => {
-                    e.preventDefault()
-                    downloadCalendarEvent()
+                    e.preventDefault();
+                    downloadCalendarEvent();
                   }}
                 >
                   Download Calendar File (.ics)
@@ -105,15 +108,12 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <Link
-            href={links.github.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+          <Link href={links.github.href} target="_blank" rel="noopener noreferrer">
             <Button size="sm">Get Started</Button>
           </Link>
         </div>
       </div>
     </header>
-  )
+  );
 }
