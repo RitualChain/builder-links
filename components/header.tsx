@@ -1,3 +1,5 @@
+'use client'
+
 import ThemeToggle from "./theme-toggle";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
