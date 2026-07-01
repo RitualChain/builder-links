@@ -51,7 +51,7 @@ export const links = {
     },
     twitter: {
         name: "Twitter",
-        href: "https://x.com/BunsDev",
+        href: "https://x.com/ritualfnd",
         icon: "ri:twitter-x-fill",
         type: "community" as const
     },
