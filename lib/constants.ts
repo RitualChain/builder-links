@@ -55,6 +55,18 @@ export const links = {
         icon: "ri:twitter-x-fill",
         type: "community" as const
     },
+    faucet: {
+        name: "Faucet",
+        href: "https://faucet.ritualfoundation.org",
+        icon: "ri:drop-fill",
+        type: "resource" as const
+    },
+    explorer: {
+        name: "Explorer",
+        href: "https://explorer.ritualfoundation.org",
+        icon: "ri:search-eye-fill",
+        type: "resource" as const
+    },
     officeHours: {
         name: "Office Hours",
         href: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ritual+DevRel+Office+Hours&dates=20251106T170000Z%2F20251106T180000Z&details=Join+Ritual%27s+Lead+DevRel+Engineer%2C+Val+Alexander%2C+to+ask+questions%2C+explore+new+features%2C+and+get+assistance+with+summoning+your+ideas+from+prototype+to+production.%0A%0AJoin+here%3A+https%3A%2F%2Fdiscord.com%2Fevents%2F1210468736205852672%2F1425703047253856287&location=https%3A%2F%2Fdiscord.com%2Fevents%2F1210468736205852672%2F1425703047253856287&recur=RRULE%3AFREQ%3DWEEKLY%3BBYDAY%3DTH",
