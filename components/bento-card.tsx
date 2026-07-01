@@ -18,6 +18,7 @@ export function BentoCard({ title, description, icon: Icon, className, href, fea
       href={href}
       rel="noopener noreferrer"
       target="_blank"
+      aria-label={`Open ${title} in a new tab`}
       className={cn(
         "group relative overflow-hidden rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5",
         featured && "bg-gradient-to-br from-card to-card/50",
