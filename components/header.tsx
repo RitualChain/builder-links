@@ -83,7 +83,7 @@ export function Header() {
               <DropdownMenuContent align="end">
                 <DropdownMenuItem asChild>
                   <Link
-                    href={links.officeHours.discordEventUrl}
+                    href={links.officeHours.discordEventUrl ?? links.officeHours.href}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
