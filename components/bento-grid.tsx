@@ -1,4 +1,4 @@
-import { BookOpen, Users, MessageSquare, Github, Send, MessageCircle, Calendar } from "lucide-react"
+import { BookOpen, Users, MessageSquare, Github, Send, MessageCircle, Calendar, Twitter } from "lucide-react"
 import { BentoCard } from "@/components/bento-card"
 import { links } from "@/lib/constants"
 
@@ -58,6 +58,14 @@ export function BentoGrid() {
           icon={Users}
           className="md:col-span-1"
           href={links.reddit.href}
+        />
+
+        <BentoCard
+          title="X (Twitter)"
+          description="Follow Ritual Chain on X for the latest announcements, updates, and community highlights."
+          icon={Twitter}
+          className="md:col-span-1"
+          href={links.twitter.href}
         />
 
         <BentoCard
