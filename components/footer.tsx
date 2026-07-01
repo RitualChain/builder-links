@@ -35,7 +35,7 @@ export function Footer() {
                     href={link.href}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="flex flex-cols gap-2 justify-start items-center transition-colors hover:text-foreground">
+                    className="flex flex-col gap-2 justify-start items-center transition-colors hover:text-foreground">
                     <Icon icon={link.icon} className='size-4' />
                     {link.name}
                   </Link>

@@ -15,10 +15,10 @@ export function downloadCalendarEvent() {
   const location = "https://discord.com/events/1210468736205852672/1425703047253856287"
   const discordUrl = "https://discord.com/events/1210468736205852672/1425703047253856287"
   
-  // Start date: Thursday, Nov 6, 2025, 5:00 PM UTC
-  const startDate = new Date("2025-11-06T17:00:00Z")
-  // End date: Thursday, Nov 6, 2025, 6:00 PM UTC
-  const endDate = new Date("2025-11-06T18:00:00Z")
+  // Start date: Thursday, Jul 3, 2026, 5:00 PM UTC
+  const startDate = new Date("2026-07-03T17:00:00Z")
+  // End date: Thursday, Jul 3, 2026, 6:00 PM UTC
+  const endDate = new Date("2026-07-03T18:00:00Z")
   
   // Format dates in ICS format (YYYYMMDDTHHmmssZ)
   const formatICSDate = (date: Date): string => {
@@ -71,7 +71,8 @@ export function downloadCalendarEvent() {
     'END:VCALENDAR',
   ].join('\r\n')
   
-  // Create blob and download
+  // Create blob and download (browser-only)
+  if (typeof window === "undefined") return
   const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' })
   const url = URL.createObjectURL(blob)
   const link = document.createElement('a')
